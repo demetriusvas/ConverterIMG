@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Imagens Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Imagens Online</h1>
+        
+        <div id="upload-area" class="upload-area">
+            <input type="file" id="file-input" multiple accept="image/*,.heic,.heif">
+            <label for="file-input" id="upload-label">
+                <p>Arraste e solte suas imagens aqui ou clique para selecionar</p>
+                <span>Formatos suportados: HEIC, JPG, PNG, WEBP</span>
+            </label>
+        </div>
+
+        <div id="preview-section" class="preview-section">
+            <h2>Pré-visualização</h2>
+            <div id="preview-grid" class="preview-grid"></div>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="format-select">Formato:</label>
+                <div class="select-wrapper">
+                    <select id="format-select">
+                        <option value="jpeg">JPG</option>
+                        <option value="png">PNG</option>
+                        <option value="webp">WEBP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="quality-control" class="control-group">
+                <label for="quality-slider">Qualidade: <span id="quality-value">90%</span></label>
+                <input type="range" id="quality-slider" min="1" max="100" value="90">
+            </div>
+
+            <div class="control-group-buttons">
+                <button id="convert-btn" class="btn btn-primary">Converter</button>
+                <button id="download-zip-btn" class="btn btn-success" style="display: none;">Baixar Todas (.zip)</button>
+                <button id="clear-btn" class="btn btn-secondary">Limpar Tudo</button>
+            </div>
+        </div>
+
+        <div id="result-section" class="result-section">
+            <h2>Resultados</h2>
+            <div id="result-grid" class="result-grid"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
