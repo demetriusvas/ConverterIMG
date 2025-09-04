@@ -25,6 +25,27 @@ h1 {
     margin-bottom: 30px;
 }
 
+.subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.subtitle a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.subtitle a:hover {
+    color: #007bff;
+}
+
 .upload-area {
     border: 3px dashed #dfe6e9;
     border-radius: 8px;
